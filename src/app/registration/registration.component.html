@@ -1,0 +1,32 @@
+<section class="login">
+    <div class="container">
+        <div class="banner-content">
+
+            <h1><i class="fa fa-smile"></i></h1>
+            <form class="form-signin" #heroForm="ngForm" (ngSubmit)="userRegistration()">
+                <h3 class="form-signin-heading">Please register</h3>
+                <div class="form-group">
+                    <input type="text" placeholder="First Name" class="form-control" id="name" [(ngModel)]="firstNameValue" [ngModelOptions]="{standalone: true}" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Last Name" class="form-control" id="name" [(ngModel)]="lastNameValue" [ngModelOptions]="{standalone: true}" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control" id="email" [(ngModel)]="emailValue" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control" id="password" [(ngModel)]="passwordValue" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Confirm Password" class="form-control" id="confirm-password" [(ngModel)]="confirmPasswordValue" [ngModelOptions]="{standalone: true}">
+                </div>
+                <button class="kafe-btn kafe-btn-mint btn-block" type="submit" name="subm">Sign Up</button>
+                <br/>
+                <a class="btn btn-dark " [routerLink]="['/login']" role="button">Already have an account? Click Here.</a>
+            </form>
+
+        </div>
+        <!--/. banner-content -->
+    </div>
+    <!-- /.container -->
+</section>

@@ -1,0 +1,40 @@
+<!-- <div class="container" >
+  <h1 align="center">Login</h1>
+  <form class="registerform" #heroForm="ngForm" (ngSubmit)="userRegistration()">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" id="email" [(ngModel)]="emailValue" [ngModelOptions]="{standalone: true}" >
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="text" class="form-control" id="password" [(ngModel)]="passwordValue" [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <button type="submit" class="submit-button btn btn-success">Submit</button>
+  </form>
+</div> -->
+
+<section class="login">
+    <div class="container">
+        <div class="banner-content">
+
+            <h1><i class="fa fa-smile"></i></h1>
+            <form class="form-signin" #heroForm="ngForm" (ngSubmit)="userRegistration()">
+                <h3 class="form-signin-heading">Please Login</h3>
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control" id="email" [(ngModel)]="emailValue" [ngModelOptions]="{standalone: true}" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control" id="password" [(ngModel)]="passwordValue" [ngModelOptions]="{standalone: true}" required>
+                </div>
+                <button class="kafe-btn kafe-btn-mint btn-block" type="submit" name="submit">Login</button>
+                <br/>
+                <a class="btn btn-dark " [routerLink]="['/register']" role="button">Don't have an account? Click Here.</a>
+            </form>
+
+        </div>
+        <!--/. banner-content -->
+    </div>
+    <!-- /.container -->
+</section>

@@ -1,0 +1,134 @@
+<section class="profile">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-3">
+                <div class="profilebox hidden-xs hidden-sm" style="background: linear-gradient( rgba(34,34,34,0.45), rgba(34,34,34,0.45)), url('../assets/assets/img/posts/4.jpg') no-repeat;
+            background-size: cover;
+                background-position: center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;">
+                </div>
+                <div class="profilebox hidden-xs hidden-sm" style="background: linear-gradient( rgba(34,34,34,0.45), rgba(34,34,34,0.45)), url('../assets/assets/img/posts/1.jpg') no-repeat;
+            background-size: cover;
+                background-position: center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="profilebox-large hidden-xs hidden-sm" style="background: linear-gradient( rgba(34,34,34,0.45), rgba(34,34,34,0.45)), url('../assets/assets/img/posts/9.jpg') no-repeat;
+            background-size: cover;
+                background-position: center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="profilebox hidden-xs hidden-sm" style="background: linear-gradient( rgba(34,34,34,0.45), rgba(34,34,34,0.45)), url('../assets/assets/img/posts/11.jpg') no-repeat;
+            background-size: cover;
+                background-position: center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;">
+                </div>
+                <div class="profilebox" style="background: linear-gradient( rgba(34,34,34,0.6), rgba(34,34,34,0.6)), url('../assets/assets/img/posts/12.jpg') no-repeat;
+            background-size: cover;
+                background-position: center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;">
+                </div>
+            </div>
+
+        </div>
+        <!--/ row-->
+    </div>
+    <!--/ container -->
+</section>
+<!--/ profile -->
+
+<section class="user-profile">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="post-content">
+                    <div class="author-post text-center">
+                        <a href="javascript:void(0)" (click)="chooseProfileImage()"><img class="img-fluid img-circle" [src]="this.userImage != '' ? (imageUrl + userImage) : defaultImage" alt="Image"></a>
+                        <input id="profileImage" type="file" (change)="onImageSelected($event)" style="display:none">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="details">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="details-box row">
+                    <div class="col-lg-9">
+                        <div class="content-box">
+                            <h4>{{this.username}} <i class="fa fa-check"></i></h4>
+                        </div>
+                        <!--/ media -->
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="follow-box">
+                            <a href="javascript:void(0);" href="#editUsers" data-toggle="modal" (click)="appendEdit()" class="kafe-btn kafe-btn-mint"><i class="fa fa-edit"></i> Profile Edit</a>
+                        </div>
+                        <!--/ dropdown -->
+                    </div>
+                </div>
+                <!--/ details-box -->
+
+            </div>
+        </div>
+    </div>
+    <!--/ container -->
+</section>
+<!--/ profile -->
+
+<section class="home-menu">
+    <div class="container">
+        <div class="row">
+
+            <div class="menu-category">
+                <ul class="menu">
+                    <li class="current-menu-item"><a href="javascript:void(0);">Posts <span>1.7k</span></a></li>
+                    <li><a href="javascript:void(0);">Followers <span>1.3M</span></a></li>
+                    <li><a href="javascript:void(0);">Following <span>1200</span></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--/home-menu -->
+
+<div id="editUsers" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button id="closeModal" type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                         <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                    </button>
+                <div>
+                    <form action="">
+                        <label for="fname">User Name</label>
+                        <input type="text" id="fname" [(ngModel)]="userNameEdit" name="username" placeholder="Your name..">
+
+                        <label for="lname">Email</label>
+                        <input disabled type="text" id="lname" [(ngModel)]="emailEdit" name="email" placeholder="Your last name..">
+
+                        <input type="submit" value="Submit" (click)="editUsers()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

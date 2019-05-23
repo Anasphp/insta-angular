@@ -1,0 +1,36 @@
+.open-reply {
+    display: block;
+}
+
+.hide-reply {
+    display: none;
+}
+
+.dropdown-options {
+    display: block;
+    width: 100%;
+    padding: 4px 0px 4px 10px;
+    clear: both;
+    font-weight: 400;
+    font-family: 'Abhaya Libre', serif;
+    font-size: 14px !important;
+    color: #848484;
+    text-align: inherit;
+    white-space: nowrap;
+    background: 0 0;
+    border: 0;
+}
+
+.dropdown-icons {
+    border-radius: 50%;
+    font-size: 24px;
+    height: 32px;
+    width: 32px;
+    padding: 0;
+    overflow: hidden;
+    color: inherit !important;
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}

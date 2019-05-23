@@ -1,0 +1,49 @@
+.dropdown-options {
+    display: block;
+    width: 100%;
+    padding: 4px 0px 4px 10px;
+    clear: both;
+    font-weight: 400;
+    font-family: 'Abhaya Libre', serif;
+    font-size: 14px !important;
+    color: #848484;
+    text-align: inherit;
+    white-space: nowrap;
+    background: 0 0;
+    border: 0;
+}
+
+.dropdown-icons {
+    border-radius: 50%;
+    font-size: 24px;
+    height: 32px;
+    width: 32px;
+    padding: 0;
+    overflow: hidden;
+    color: inherit !important;
+}
+
+.open-reply {
+    display: block;
+}
+
+.open-reply ul {
+    padding-left: 13px;
+}
+
+.open-reply ul li {
+    position: relative;
+}
+
+.open-reply ul li svg {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 7px;
+    right: 0;
+    cursor: pointer;
+}
+
+.hide-reply {
+    display: none;
+}

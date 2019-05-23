@@ -1,0 +1,112 @@
+<link type="text/css" href="../assets/assets/css/demos/interest.css" rel="stylesheet" />
+<script src="../assets/assets/js/modernizr-custom.html"></script>
+
+<section class="channel-one">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <aside class="sidebar">
+                    <ul>
+                        <li class="active"><a href="javascript:void(0);" [routerLink]="['/admin']"><i class="fa fa-align-left"></i> DashBoard</a></li>
+                        <li><a style="color: #535764 !important" href="javascript:void(0);" [routerLink]="['/all-posts']"><i class="fa fa-align-left"></i> All Posts </a></li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="col-lg-9">
+                    <a href="#createUsers" data-toggle="modal"> <button class="create-user"><i class="fa fa-user-plus"></i> Create User</button></a>
+                </div>
+                <table id="customers">
+                    <tr>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th>Posts Count</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr *ngFor="let user of allUsers">
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.posts?.length}}</td>
+                        <td>
+                            <a href="javascript:void(0);" href="#editUsers" data-toggle="modal" (click)="appendEdit(user)"><i  style="font-size:24px" class="fa">&#xf044;</i></a> | <a href="javascript:void(0);"><i style="font-size:24px" class="fa fa-trash" (click) = "deleteUser(user.id)" ></i></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <!--/ row -->
+    </div>
+    <!--/ container -->
+</section>
+<!--/ newsfeed -->
+
+<div id="editUsers" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button id="closeModal" type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                     <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                </button>
+                <div>
+                    <form action="">
+                        <label for="fname">User Name</label>
+                        <input type="text" id="fname" [(ngModel)]="userNameEdit" name="username" placeholder="Your name..">
+
+                        <label for="lname">Email</label>
+                        <input disabled type="text" id="lname" [(ngModel)]="emailEdit" name="email" placeholder="Your last name..">
+
+                        <input type="submit" value="Submit" (click)="editUsers()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="createUsers" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button id="createModalClose" type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                         <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                    </button>
+                <div>
+                    <form action="">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" [(ngModel)]="firstName" name="fname" placeholder="User First Name ...">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" [(ngModel)]="lastName" name="lname" placeholder="User Last Name ...">
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" [(ngModel)]="userEmail" name="email" placeholder="Enter a Email ...">
+
+                        <label for="password">Password</label>
+                        <input type="text" id="password" [(ngModel)]="password" name="password" placeholder="Password ...">
+
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="text" id="confirm-password" [(ngModel)]="confirmPassword" name="confirm-password" placeholder="Confirm Password ...">
+
+                        <input type="submit" value="Submit" (click)="createUsers()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/assets/js/jquery.min.js"></script>
+<script src="../assets/assets/js/bootstrap.min.js"></script>
+<script src="../assets/assets/js/base.js"></script>
+<script src="../assets/assets/plugins/slimscroll/jquery.slimscroll.js"></script>
+<script>
+    $('#Slim,#Slim2').slimScroll({
+        height: "auto",
+        position: 'right',
+        railVisible: true,
+        alwaysVisible: true,
+        size: "8px",
+    });
+</script>
